@@ -1,0 +1,19 @@
+<h3>Player List</h3>
+
+<div>
+	Sort by
+	<select (change)="onChangeSorting($event.target.value)">
+		<option [value]="sortItem.key" *ngFor="let sortItem of orderByValues">{{sortItem.label}}</option>
+	</select>
+	<span *ngIf="ascending" (click)="onChangeDirection()" class="arrow">&#9650;</span>
+	<span *ngIf="!ascending" (click)="onChangeDirection()" class="arrow">&#9660;</span>
+</div>
+
+<div class="grid grid-pad">
+	<div *ngFor="let currentPlayer of players | orderBy: orderByValue: ascending" class="col-1-4">
+		<player-slat [player]="currentPlayer"></player-slat> 
+	</div>
+</div>
+
+<player-search></player-search>
+

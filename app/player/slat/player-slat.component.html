@@ -1,0 +1,11 @@
+<div id="container">
+	<div class="faceImg">
+		<img [src]="'app/img/players/' + player.firstName + '_' + player.lastName + '.jpg'">
+	</div>
+	<div>{{player.firstName}}<br>{{player.lastName}}</div>
+	<div>#{{player.jerseyNum}} {{player.position}}</div>
+	<div>
+		<span class="pos" (click)="vote(player, true)"> &#9650;{{player.positiveVotes}} </span>
+		<span class="neg" (click)="vote(player)"> &#9660;{{player.negativeVotes}} </span>
+	</div>
+</div>

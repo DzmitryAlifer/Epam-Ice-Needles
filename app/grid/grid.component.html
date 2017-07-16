@@ -1,0 +1,9 @@
+<h2>Team line-up</h2>
+
+<div>
+	<div class="grid" [(ngGrid)]="gridConfig">
+	    <span class="grid-item" *ngFor="let currentPlayer of players" [(ngGridItem)]="gridItemConfig">
+	    	<player-slat [player]="currentPlayer"></player-slat> 
+		</span>
+	</div>
+</div>

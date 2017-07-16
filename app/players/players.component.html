@@ -1,0 +1,37 @@
+<h2>Player list</h2>
+
+<div class="parent">
+  
+  <ul class="players">
+    <li *ngFor="let player of players" (click)="onSelect(player)" [class.selected]="player === selectedPlayer">
+      <span class="player-element">
+        <span class="badge">{{player.id}}</span> 
+        {{player.firstName}} {{player.lastName}}
+        <span class="delete-button" (click)="deletePlayer(player, $event)">&#10006;</span>
+      </span>
+      
+    </li>
+  </ul>
+  
+  <div *ngIf="selectedPlayer" class="playerInfo">
+    <h2>{{selectedPlayer.firstName}} {{selectedPlayer.lastName}}</h2>
+    <div class="faceImgLarge">
+      <img [src]="'app/img/players/' + selectedPlayer.firstName + '_' + selectedPlayer.lastName + '.jpg'">
+    </div>
+    <table >
+      <tr><td>Position</td><td>{{selectedPlayer.position}}</td></tr>
+      <tr><td>Jersey</td><td>{{selectedPlayer.jerseyNum}}</td></tr>
+      <tr><td>Is epamer</td><td>{{selectedPlayer.isEpamer}}</td></tr>
+    </table>
+    <!-- <button (click)="gotoDetail()">View Details</button> -->
+  </div>
+
+</div>
+
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="addPlayer()">Add New Player</button>
+<div *ngIf="addingPlayer">
+  <my-player-detail (close)="close($event)"></my-player-detail>
+</div>
+
+
