@@ -1,6 +1,7 @@
 **-= Epam Ice Needles =-**
 
 **About**
+
 A simple Angular 2 application.
 Votes page: a dashboard page that allows you to vote for/against any player.
 Player details page: you can observe player's details, you can add/delete player.
