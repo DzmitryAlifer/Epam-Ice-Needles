@@ -1,5 +1,4 @@
-# Epam Ice Needles 
-![alt text](https://github.com/DzmitryAlifer/Epam-Ice-Needles/blob/master/app/img/logo.jpg)
+![Epam Ice Needles](https://github.com/DzmitryAlifer/Epam-Ice-Needles/blob/master/app/img/logo.jpg)# Epam Ice Needles 
 
 ### About
 
